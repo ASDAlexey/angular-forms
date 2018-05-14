@@ -8,7 +8,7 @@ import { filter } from 'rxjs/operators/filter';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('formRef') form;
+  /*@ViewChild('formRef') form;
   username = 'John';
 
   onSunmit(value) {
@@ -25,5 +25,8 @@ export class AppComponent {
 
     // this.form.valueChanges.subscribe((e) => console.log(e));
     // this.form.statusChanges.subscribe((e) => console.log(e));
-  }
+  }*/
+
+  locations = ['Home', 'Away', 'Space', 'Ocean', 'Stars'];
+  // currectLocation = 'Space';
 }

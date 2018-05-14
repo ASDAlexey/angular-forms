@@ -1,3 +1,4 @@
+<!--
 <form #formRef="ngForm" (ngSubmit)="onSunmit(formRef.value)">
   <fieldset ngModelGroup="login">
     <label class="label">Form</label>
@@ -19,5 +20,19 @@
   </fieldset>
   <button type="submit">Submit</button>
 </form>
-{{ formRef.value | json }}
-{{ formRef.valid | json }}
+-->
+
+<form #formRef="ngForm">
+  <!--[ngModel]="currectLocation"-->
+  <!-- <div *ngFor="let location of locations">
+     <input [attr.id]="location" name="location" type="radio" ngModel [value]="location" required>
+     <label [attr.for]="location">{{ location }}</label>
+   </div>-->
+  <div>
+    <select name="location" [ngModel]="locations[0]">
+      <option *ngFor="let location of locations" [value]="location">{{ location }}</option>
+    </select>
+  </div>
+  {{ formRef.value | json }}
+  {{ formRef.valid | json }}
+</form>

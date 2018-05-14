@@ -9,3 +9,7 @@ input.ng-invalid {
 input.ng-valid {
   border: 3px solid #008000;
 }
+
+input.ng-invalid + label::after {
+  content: '<-- Pick one';
+}
