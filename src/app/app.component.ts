@@ -1,6 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { combineLatest } from 'rxjs/observable/combineLatest';
-import { filter } from 'rxjs/operators/filter';
+import { Component } from '@angular/core';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +7,10 @@ import { filter } from 'rxjs/operators/filter';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor() {
+    console.log(environment);
+  }
+
   /*@ViewChild('formRef') form;
   username = 'John';
 
@@ -29,4 +32,5 @@ export class AppComponent {
 
   locations = ['Home', 'Away', 'Space', 'Ocean', 'Stars'];
   // currectLocation = 'Space';
+
 }
